@@ -1,0 +1,11 @@
+[Unit]
+Description=CacaRankingBot Telegram Bot
+
+[Service]
+User=pi
+Type=oneshot
+ExecStart=/home/pi/cultibot/bin/python3 /home/pi/CacaRankingBot/main.py &
+WorkingDirectory=/home/pi/cultibot/
+
+[Install]
+WantedBy=multi-user.target
