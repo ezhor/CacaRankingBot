@@ -52,7 +52,7 @@ async def messageHandler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
     data = readData(chatId)
     increment(data, chatId, userId, userFullName)
-    await update.message.reply_text(f"¡¡¡{userFullName} ha cagado!!!\n\nRanking actual:\n{beautifyData(data)}")
+    await update.message.reply_text(f"👏¡¡¡{userFullName} ha cagado!!!👏\n\nRanking actual:\n{beautifyData(data)}")
     
 internet = False
 while not internet:
