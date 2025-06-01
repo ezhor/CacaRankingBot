@@ -28,8 +28,8 @@ def beautifyData(data: configparser.ConfigParser) -> str:
     dataText = ""
     dataList: list[(str, int)] = []
     for section in data.sections():
-        dataList.append((data[section]["name"], data[section]["score"]))
-    dataList.sort(key=lambda x: x[1])
+        dataList.append((data[section]["name"], int(data[section]["score"])))
+    dataList.sort(key=lambda x: x[1], reverse=True)
     for i in range(len(dataList)):
         dataText += f"{medal(i)} {dataList[i][0]} ({dataList[i][1]})\n"
     return dataText
